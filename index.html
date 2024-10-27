@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="https://www.svgrepo.com/show/217778/spotify.svg">
+  <title>SpotifyCloneBy ABhi</title>
+</head>
+
+<body>
+
+  <div class="flex">
+    <div id="left">
+      <div id="home">
+        <div id="logo">
+          <img src="logo.svg">
+        <img  class="cross " src="https://www.svgrepo.com/show/521590/cross.svg" width="35px">
+        </div>
+        <ul>
+          <li><img src="home.svg" width="30vw"></li>
+          <li><img src="search.svg" width="30vw"></li>
+        </ul>
+      </div>
+      <div id="library">
+        <div id="ylib">
+          <img src="lib.svg"> Your Library
+        </div>
+        <div id="songkart" class="songlist flex">
+          <ul id="ul1">
+            <!-- List of songs will be dynamically added here -->
+          </ul>
+        </div>
+        <footer>
+          <span>legal</span>
+          <span>Safety & Privacy Center</span>
+          <span>Privacy Policy</span>
+          <span>Cookies</span>
+          <span>About Ads</span>
+          <span>Accessibility</span>
+        </footer>
+      </div>
+    </div>
+
+    <div id="right">
+      <navbar class="flex" id="nav">
+        <div id="navicon">
+          <img class="invert humbrag" src="https://www.svgrepo.com/show/522139/hamburger-2.svg" width="30px">
+          <img src="https://www.svgrepo.com/show/449192/previous.svg" width="25px">
+          <img src="https://www.svgrepo.com/show/449159/next.svg" width="25px">
+        </div>
+        <div id="button">
+          <button id="sign">Sign up</button>
+          <button id="log">Log in</button>
+        </div>
+      </navbar>
+
+      <p id="popular">Popular Songs</p>
+      <section class="flex" id="sec1">
+        <!-- <div id="card">
+          <img src="https://i.scdn.co/image/ab67616d00001e02aad3f4b601ae8763b3fc4e88">
+          <p>Glory</p>
+          <p>Yo Yo Honey Singh</p>
+        </div> -->
+      </section>
+
+      <!-- Playbar -->
+      <div id="playbar2">
+
+        
+        <div id="playbar">
+          <img class="music" id="previous" src="https://www.svgrepo.com/show/425665/previous-back-direction.svg" width="30px">
+          <!-- Play button (updated dynamically) -->
+          <img id="playBtn" class="music" src="https://www.svgrepo.com/show/294571/play-button-movie.svg" width="35px">
+          <img class="music" id="next" src="https://www.svgrepo.com/show/521767/next.svg" width="30px">
+        </div>
+        <div class="songinfo flex">Song to chla  </div>
+         <div class="time  flex">00:00 / 00:00</div> 
+         <!-- <div class="totaltime flex">00:00</div> -->
+         <div id="both">
+          <div class="slide"></div>
+          <div class="circle"></div>
+         </div>
+      
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript file -->
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+
+
+}
+
+#li1 {
+    display: none;
+}
+
+body {
+    background-color: black;
+}
+
+.flex {
+    display: flex;
+}
+
+#left {
+    z-index: 1;
+    width: 25vw;
+    height: 95vh;
+    left: 0;
+    margin: 10px;
+    overflow: hidden;
+    transition: left  1.3s;
+}
+
+#logo {
+    filter: invert(70%);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+#home {
+    background-color: #121212;
+    border-radius: 10px;
+}
+
+.cross {
+    display: none;
+}
+
+#home ul {
+    filter: invert(70%);
+    list-style: none;
+}
+
+#library {
+    margin: 12px 0;
+    padding: 10px;
+    height: 80vh;
+    position: relative;
+    background-color: #121212;
+    border-radius: 10px;
+    color: white;
+    font-family: Montserrat;
+}
+
+#ylib {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+#ylib>img {
+    height: 50px;
+    filter: invert(70%);
+}
+
+.music {
+    filter: invert(70%);
+}
+
+#songkart {
+    padding: 12px;
+    height: 45vh;
+    width: 25vw;
+
+
+}
+
+
+/* mere liye imp property yaad rhkna */
+#songkart ul {
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#songkart ul::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+#songkart>ul>li {
+    padding: 6px;
+    list-style: none;
+
+}
+
+#libmusic {
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid white;
+    border-radius: 6px;
+    width: 21.8vw;
+
+}
+
+#libmusic:hover {
+    background-color: #292929;
+    cursor: pointer;
+}
+
+#libmusic p {
+    padding: 5px;
+}
+
+
+#library footer {
+
+    position: absolute;
+    align-items: center;
+    /* gap:4px; */
+    bottom: 20px;
+    /* padding: 14px; */
+
+}
+
+#library footer span {
+    padding: 0 14px;
+    margin: 14px 0;
+    font-size: 10px;
+}
+
+#right {
+    width: 75vw;
+    height: 100vh;
+    background-color: #121212;
+    margin: 12px;
+    color: white;
+    border-radius: 10px;
+}
+
+#nav {
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navicon {
+
+    padding: 14px;
+    filter: invert(70%);
+}
+
+.humbrag {
+    display: none;
+}
+
+button {
+    padding: 12px;
+    height: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 0px solid;
+}
+
+button:hover {
+    font-weight: 800;
+    cursor: pointer;
+}
+
+#sign {
+    background-color: #121212;
+    color: white;
+}
+
+#log {
+    width: 90px;
+}
+
+#popular {
+    font-size: 40px;
+    padding: 14px;
+    font-family: Montserrat;
+    font-weight: 600;
+}
+
+#popular:hover {
+    text-decoration: underline;
+}
+
+#sec1 {
+    margin-left: 12px;
+    width: 100%;
+    justify-content: space-evenly;
+    height: 70vh;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+}
+
+#sec1 ::-webkit-scrollbar {
+    display: none;
+}
+
+#card {
+    padding: 12px;
+    height: 300px;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+    width: 220px;
+}
+
+#card:hover {
+    background-color: #1f1f1f;
+
+}
+
+#card p {
+    padding: 4px;
+}
+
+#card img {
+    height: 200px;
+    border-radius: 10px;
+}
+
+#card>img:hover {
+    height: 210px;
+}
+
+#playbar2 {
+    background-color: #292929;
+    border-radius: 20px;
+    padding: 12px 0;
+    position: relative;
+    justify-content: center;
+
+}
+
+#playbar {
+    display: flex;
+    gap: 14px;
+    color: white;
+    justify-content: center;
+    font-weight: 600;
+    z-index: +1;
+}
+
+#playbar img:hover {
+    width: 35px;
+}
+
+.songinfo {
+    position: relative;
+    margin-top: -20px;
+    left: 5%;
+    font-weight: 900;
+    font-size: 19px;
+    width: 25vw;
+    /* display: inline; */
+    text-align: center;
+}
+
+.g1 {
+    width: 13vw;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+.time {
+    position: relative;
+    left: 88%;
+    top: -10px
+}
+
+.totaltime {
+    position: relative;
+    margin-left: 93%;
+    margin-top: -30px;
+    padding: 2px;
+}
+
+#both {
+    position: relative;
+    width: 95%;
+
+    left: 23px;
+}
+
+.slide {
+    position: absolute;
+    border: 1px white solid;
+    background-color: white;
+    margin-top: 5px;
+    border-radius: 10px;
+    margin-left: 0%;
+    padding: 1px;
+    width: 100%;
+    cursor: pointer;
+
+}
+
+
+.circle {
+    position: relative;
+    left: 99%;
+    width: 4px;
+    height: 4px;
+    margin-top: 1.5px;
+    background-color: rgb(226, 214, 214);
+    padding: 3px;
+    border-radius: 100%;
+
+    transition: left 0.7s ease;
+}
+
+
+
+@media screen and (max-width:1300px) {
+    #left {
+        position: relative;
+        left: -100%;
+        height: 100vh;
+        width: 40vw;
+        margin: 0;
+        background-color: rgb(23, 22, 22);
+    }
+
+    #songkart {
+        padding: 6px;
+        height: 45vh;
+        width: 40vw;
+    }
+
+    #libmusic {
+        width: 33vw;
+        /* Increase width for smaller screens */
+    }
+
+    .g1 {
+        width: 16.8vw;
+    }
+
+    #right {
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+    }
+
+    #playbar2 {
+        width: 100vw;
+        right: 0;
+        position: absolute;
+        margin-top: -20px;
+
+    }
+
+    .time {
+        left: "80%";
+        font-size: 13px;
+    }
+
+    .humbrag {
+        display: inline-flex;
+    }
+
+    .cross {
+        display: inline-flex;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    #left {
+        width: 70vw;
+    }
+
+    #songkart {
+        width: 70vw;
+        height: 55vh;
+    }
+
+    #libmusic {
+        width: 60vw;
+        /* Further increase width for smaller screens */
+    }
+
+    .g1 {
+        width: 25vw;
+    }
+
+    .time {
+        left: 85%;
+        top: -14px;
+        font-size: 13px;
+    }
+
+    .totaltime,
+    .songinfo {
+        font-size: 13px;
+
+    }
+
+
+
+    #right {
+        width: 100vw;
+        margin: 0;
+        position: absolute;
+    }
+
+    #playbar2 {
+        padding: 8px 0;
+        position: fixed;
+
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #left {
+        width: 90vw;
+        height: auto;
+        position: absolute;
+
+        z-index: 1;
+    }
+
+    #songkart {
+        width: 90vw;
+        height: 55vh;
+    }
+
+    .g1 {
+        width: 45vw;
+    }
+
+    .totaltime, .songinfo {
+        font-size: 13px;
+
+    }
+
+    .time {
+        left: 80%;
+        font-size: 13px;
+    }
+
+    #right {
+        width: 100vw;
+        margin: 0;
+        height: 100vh;
+        position: relative;
+    }
+
+    #libmusic {
+        width: 84vw;
+        
+
+    }
+
+    #playbar2 {
+        padding: 6px 0;
+        margin-bottom: 40px;
+        position: fixed;
+    }
+
+    .humbrag {
+        display: inline-flex;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #left {
+        width: 98vw;
+        height: auto;
+        position: absolute;
+
+        z-index: 1;
+    }
+
+    #libmusic {
+        width: 90vw;
+        /* Take up almost the full width */
+    }
+
+    .time {
+        left: 83%;
+        top: -13px;
+        font-size: 13px;
+    }
+}
+
+/* time or total time thik krnna hai */
