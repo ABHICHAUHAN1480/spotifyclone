@@ -148,7 +148,7 @@ async function getsong(folder) {
     console.log(`${folder}`)
     currfolder=`${folder}`;
     song1=[];
-    let a = await fetch(`https://abhichauhan1480.github.io/spotifyclone/${folder}/`); 
+    let a = await fetch(`${folder}/`); 
     let res = await a.text();
     // console.log(res);
     let div = document.createElement("div");
