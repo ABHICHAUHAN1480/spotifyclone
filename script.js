@@ -148,8 +148,7 @@ async function getsong(folder) {
     console.log(`${folder}`)
     currfolder=folder;
     song1=[];
-    let a = await fetch(`/${folder}/`); 
-    // console.log(a);
+    let a = await fetch(`/${folder}/`); // Update this path as per your file location
     let res = await a.text();
     // console.log(res);
     let div = document.createElement("div");
