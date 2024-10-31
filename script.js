@@ -128,7 +128,7 @@ function  addCard(song) {
     const card = document.createElement('div');
     card.id = 'card';
     card.innerHTML = `
-        <img src="${song.imageUrl}">
+        <img src=${song.imageUrl}>
         <p>${song.title}</p>
         <p>${song.artist}</p>
     `;
@@ -146,19 +146,25 @@ song12.forEach(song => addCard(song));
 // Function to fetch song files from a directory
 async function getsong(folder) {
     console.log(`${folder}`)
-    currfolder=`${folder}`;
+    currfolder=folder;
     song1=[];
-    let a = await fetch(`/${folder}/`); // Update this path as per your file location
+    let a = await fetch(`/${folder}/`); 
+    // console.log(a);
     let res = await a.text();
     // console.log(res);
     let div = document.createElement("div");
     div.innerHTML = res;
     let lis = div.getElementsByTagName("a");
-
+       console.log(lis);
     for (let index = 0; index < lis.length; index++) {
         const element = lis[index];
         if (element.href.endsWith(".mp3")) {
-            song1.push(element.href.split(`/${folder}/`)[1]);
+
+            const songName = decodeURIComponent(element.href.split("/").pop());
+            song1.push(songName);
+            // console.log(element.href)
+            // console.log(element.href.split(`/${folder}/`)[1]);
+            // song1.push(element.href.split(`/${folder}/`)[1]);
         }
     }
     return(song1);
@@ -166,8 +172,8 @@ async function getsong(folder) {
 
 // Play music function
 function  playmusic(track,title) {
-    currentSong.src = `/${currfolder}/` + track;  // Update the source of the current song
-    currentSong.play();  // Play the new track
+    currentSong.src = `/${currfolder}/` + track;  
+    currentSong.play();  
      updatePlaybar(title);
 }
 
@@ -260,27 +266,18 @@ document.querySelector(".cross").addEventListener("click",()=>{
 
 // Main function to load songs and attach click event listeners
 async function main() {
-      await getsong(`${currfolder}`);
-    if (song1.length > 0) {
-        const defaultSong = song1[0]; 
-        let c = defaultSong.replaceAll("%20", " ");
-        let f = c.split("-")[0];
-        
-        currentSong.src = `/${currfolder}/`+ defaultSong; 
-        
-        updatePlaybar(f); 
-        
-        
-    }
+      song1=await getsong(`${currfolder}`);
+  
     
     let songul = document.querySelector(".songlist").getElementsByTagName("ul")[0];
- 
+      songul.innerHTML = ""
     for (const song2 of song1) {
         
-        let c = song2.replaceAll("%20", " ");
-        let f = c.split("-")[0];
-        let e = c.split("-")[1].split(".mp3")[0].trim();
-        
+        let c = decodeURIComponent(song2);
+        let parts = c.split("-");
+        let f = parts[0];
+        let e = parts[1] ? parts[1].split(".mp3")[0].trim() : "";
+      
         // Dynamically add songs to the library
         let li = document.createElement('li');
         li.innerHTML = `
@@ -292,8 +289,10 @@ async function main() {
                 </div>
                 <img class="music" src="https://www.svgrepo.com/show/479265/play-button.svg" width="35vw">
             </div>`;
+            
         // Add click event listener to play song when clicked
         li.addEventListener('click', () => {
+            
             playmusic(song2,f);
             playBtn.src="https://www.svgrepo.com/show/523589/pause-circle.svg";
 
