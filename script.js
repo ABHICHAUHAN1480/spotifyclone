@@ -273,6 +273,9 @@ async function main() {
     for (const song2 of song1) {
         
         let c = decodeURIComponent(song2);
+      if (c.includes('bafybeigwkcnytn7cw3s2ep7v3oszby6m66asrnqffzf3cnsv6pndtcljfm')) {
+        continue;
+    }
         let parts = c.split("-");
         let f = parts[0];
         let e = parts[1] ? parts[1].split(".mp3")[0].trim() : "";
