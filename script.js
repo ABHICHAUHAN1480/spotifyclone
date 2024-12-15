@@ -273,7 +273,8 @@ async function main() {
     for (const song2 of song1) {
         
         let c = decodeURIComponent(song2);
-      if (c.includes('bafybeigwkcnytn7cw3s2ep7v3oszby6m66asrnqffzf3cnsv6pndtcljfm')) {
+        if (c.includes('=') || c.includes('bafy')) {
+        console.log("Skipping hashed or unwanted song:", c);
         continue;
     }
         let parts = c.split("-");
